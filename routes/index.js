@@ -22,6 +22,20 @@ router.get('/userlist', function(req, res) {
     });
 });
 
+
+/* GET Products page.  */
+router.get('/productlist', function(req, res) {
+    var db = req.db;
+    var collection = db.get('productcollection');
+    collection.find({},{},function(e,docs){
+        res.render('productlist', {
+            "productlist" : docs
+        });
+    });
+});
+
+
+
 /* GET New User page. */
 router.get('/newuser', function(req, res) {
     res.render('newuser', { title: 'Add New User' });
@@ -59,28 +73,6 @@ router.post('/adduser', function(req, res) {
 });
 
 
-
-/* GET Products page.  */
-router.get('/products', function(req, res) {
-    var db = req.db;
-    var collection = db.get('products');
-    collection.find({},{},function(e,docs){
-        res.render('productlist', {
-            "productlist" : docs
-        });
-    });
-});
-/* GET Products page. 
-router.get('/products', function(req, res) {
-    var db = req.db;
-    var collection = db.get('usercollection');
-    collection.find({},{},function(e,docs){
-        res.render('userlist', {
-            "userlist" : docs
-        });
-    });
-});
-*/
 
 
 

@@ -1,9 +1,0 @@
-extends layout
-
-block content
-    h1.
-        Products List
-    ul
-        each product, i in productlist
-            li
-                a(href="mailto:#{product.title}")= product.title
