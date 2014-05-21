@@ -2,31 +2,32 @@ extends layout
 
 block content
     h1.
-        Product List of all the things right in this world.
+        Product List of a weirdasfuck ecommerce site.
     button(class="btn", data-action="bea").
         Be Awesome
-    button.btn(data-action="bea") Awesome
+    button.btn(data-action="bea") So Awesome
     ul
         each product, i in productlist
             li
                 a= product.title
                 table
-                    p Description:
+                    h5 Description:
                     tr
                         tr(style='width: '+(50/2)+'%').
                         tr= product.description
                     tr
                         tr= product.sizes
-                p ItemID:
+                h5 ItemID:
                     ll
                         ll=product.style
                 if product.isahorse
-                    p I'm a horse
+                    p I'm a horse.  Neigh.
+                    h4 HORSE LIFE!!!
                     p Horse Color:
                     k
                         k=product.Horsecolor
                 else
-                    p I'm not a horse!
+                    p I'm not a horse! Really.  I'm not a horse!  So I don't do horselike things.
                     h4 Type of Object
                     j
                         j=product.objecttype
