@@ -9,9 +9,26 @@ block content
     ul
         each product, i in productlist
             li
-                a(href="mailto:#{product.title}")= product.title
+                a= product.title
                 table
+                    p Description:
                     tr
-                        td(style='width: '+(100/2)+'%').
-                            Blog
-                        td= product.title
+                        tr(style='width: '+(50/2)+'%').
+                        tr= product.description
+                    tr
+                        tr= product.sizes
+                p ItemID:
+                    ll
+                        ll=product.style
+                if product.isahorse
+                    p I'm a horse
+                    p Horse Color:
+                    k
+                        k=product.Horsecolor
+                else
+                    p I'm not a horse!
+                    h4 Type of Object
+                    j
+                        j=product.objecttype
+
+
