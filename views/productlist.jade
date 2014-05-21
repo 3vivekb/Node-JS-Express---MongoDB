@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1.
+        Product List of all the things right in this world.
+    button(class="btn", data-action="bea").
+        Be Awesome
+    button.btn(data-action="bea") Awesome
+    ul
+        each product, i in productlist
+            li
+                a(href="mailto:#{product.title}")= product.title
+                table
+                    tr
+                        td(style='width: '+(100/2)+'%').
+                            Blog
+                        td= product.title
