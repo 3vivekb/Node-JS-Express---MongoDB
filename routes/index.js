@@ -34,6 +34,9 @@ router.get('/productlist', function(req, res) {
     });
 });
 
+router.get('/productsearch', function(req, res) {
+    res.render('productsearch', { title: 'Find a Product?' });
+});
 
 
 /* GET New User page. */
@@ -71,8 +74,19 @@ router.post('/adduser', function(req, res) {
         }
     });
 });
-
-
+/*
+productsearch.prototype.findById = function(id, callback) {
+    this.getCollection(function(error, productcollection) {
+      if( error ) callback(error)
+      else {
+        productcollection.findOne({style: productcollection.db.bson_serializer.ObjectID.createFromHexString(id)}, function(error, result) {
+          if( error ) callback(error)
+          else callback(null, result)
+        });
+      }
+    });
+};
+*/
 
 
 
