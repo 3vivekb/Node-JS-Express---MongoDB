@@ -2,10 +2,11 @@ extends layout
 
 block content
     h1.
-        Product List of a weirdasfuck ecommerce site.
+        Product List of an weirdasf trip ecommerce site.
     button(class="btn", data-action="bea").
         Be Awesome
     button.btn(data-action="bea") So Awesome
+    button.btn(data-action="bea") BUY BUY BUY
     ul
         each product, i in productlist
             li
@@ -31,5 +32,13 @@ block content
                     h4 Type of Object
                     j
                         j=product.objecttype
+                    if product.isatv
+                        h1 I'M A TV
+                        P Brand: (ONLY TV'S HAVE BRANDS.  DUH.)
+                        k
+                            k=product.brand
+                        p Diagonal Length:
+                        w
+                            w=product.diagonal
 
 
